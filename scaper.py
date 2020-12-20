@@ -40,21 +40,21 @@ for chunks in elems:
         # coyList = "".join(coyList)
         # coyList = coyList.split("</h")
         # coyName = coyList[0]
-
+        coyEmail = coyList[5][23:].split("</p>")[0]
         # coyTel = coyList[9]
         # coyEmail = coyList[17].split("/strong>")[1]
         # logging.debug(coyList)
-        for idx, chunky in enumerate(coyList) :
-            if idx == 0 :
-                coyName = chunky.split("</h6>")[0]
-            elif idx == 3 :
-                coyTel = chunky[23:].split("</p>")[0]
+        # for idx, chunky in enumerate(coyList) :
+        #     if idx == 0 :
+        #         coyName = chunky.split("</h6>")[0]
+        #     elif idx == 3 :
+        #         coyTel = chunky[23:].split("</p>")[0]
+        #
+        #     elif idx == 5 :
+        #         coyEmail = chunky[23:].split("</p>")[0]
 
-            elif idx == 5 :
-                coyEmail = chunky[23:].split("</p>")[0]
-
-
-        playFile.write(f"{coyName}, {coyTel}, {coyEmail}\n")
+        playFile.write(f"{coyEmail};")
+        # playFile.write(f"{coyName}, {coyTel}, {coyEmail}\n")
         # playFile.write(f"{coyName} \n")
         # playFile.write(f"{coyTel} \n")
         # playFile.write(f"{coyEmail} \n")
